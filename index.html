@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Siddharth Girish — AI & Data Science undergraduate building multimodal deepfake detection systems, RAG-powered search engines and NLP applications with PyTorch, TensorFlow, LangChain and Hugging Face." />
+  <title>Siddharth Girish — AI & Data Science Portfolio</title>
+
+  <!-- Fonts: Manrope (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo" aria-label="Go to top">S<span>G</span>.</a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
+        <a href="#home" class="nav__link is-active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#certifications" class="nav__link">Certifications</a>
+        <a href="#achievements" class="nav__link">Achievements</a>
+        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--red"></div>
+        <div class="hero__glow hero__glow--teal"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal">Hello, I'm</p>
+          <h1 class="hero__name reveal">Siddharth <span>Girish</span></h1>
+
+          <!-- Typing animation target -->
+          <p class="hero__title reveal"><span id="typedTitle"></span><span class="hero__caret" aria-hidden="true"></span></p>
+
+          <p class="hero__tagline reveal">Developing intelligent systems with machine learning, computer vision, and GenAI.</p>
+
+          <p class="hero__summary reveal">
+            AI &amp; Data Science undergraduate with hands-on experience across machine learning,
+            computer vision and generative AI — from multimodal deepfake detection to RAG-powered
+            search engines, built with PyTorch, TensorFlow, LangChain and Hugging Face.
+          </p>
+
+          <div class="hero__actions reveal">
+            <!-- Place SIDDHARTH_GIRISH_RESUME.pdf in the same folder as index.html -->
+            <a href="SIDDHARTH_GIRISH_RESUME.pdf" class="btn btn--primary" download>Download Resume</a>
+            <a href="#projects" class="btn btn--outline">View Projects</a>
+            <a href="#contact" class="btn btn--ghost">Contact Me</a>
+          </div>
+
+          <ul class="hero__meta reveal">
+            <li><a href="mailto:siddharth.j.girish@gmail.com">siddharth.j.girish@gmail.com</a></li>
+            <li><a href="tel:+919342426548">+91&nbsp;93424&nbsp;26548</a></li>
+            <li>Palakkad, Kerala, India</li>
+          </ul>
+
+          <div class="hero__social reveal">
+            <!-- Update the LinkedIn URL below if your public profile slug is different -->
+            <a href="https://www.linkedin.com/in/siddharth-girish" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+            <a href="https://github.com/SiddharthGirish" target="_blank" rel="noopener" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12v3.15c0 .31.2.67.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+        <span class="hero__mouse"></span>
+        Scroll
+      </a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section__eyebrow reveal">About</p>
+        <h2 class="section__title reveal">Building AI that solves real problems</h2>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>
+              I'm an AI &amp; Data Science undergraduate pursuing a B.Tech at Akshaya College of
+              Engineering and Technology alongside the BS Foundation programme in Data Science at
+              IIT Madras. My work spans the full machine learning lifecycle — data preprocessing,
+              model training, evaluation and deployment.
+            </p>
+            <p>
+              My goal is to grow into an ML engineer who ships reliable, production-grade AI. I'm
+              especially drawn to large language models, retrieval-augmented generation and
+              computer vision — areas where I've already built end-to-end systems rather than
+              notebook experiments.
+            </p>
+            <p>
+              What drives me is scale of impact: applying AI to healthcare decisions, media
+              integrity and everyday health — problems where a well-built model genuinely changes
+            outcomes.
+            </p>
+          </div>
+
+          <div class="about__stats">
+            <div class="stat reveal">
+              <span class="stat__num" data-count="4">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">Projects completed</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat__num" data-count="25">0</span><span class="stat__plus">+</span>
+              <span class="stat__label">Technical skills</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat__num" data-count="4">0</span><span class="stat__plus"></span>
+              <span class="stat__label">Certifications</span>
+            </div>
+            <div class="stat reveal">
+              <span class="stat__num" data-count="2">0</span><span class="stat__plus"></span>
+              <span class="stat__label">Internships</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section section--tint" id="education">
+      <div class="container">
+        <p class="section__eyebrow reveal">Education</p>
+        <h2 class="section__title reveal">Academic background</h2>
+
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="card timeline__card">
+              <span class="timeline__period">2023 — Present</span>
+              <h3>Bachelor of Technology</h3>
+              <p class="timeline__sub">Artificial Intelligence &amp; Data Science</p>
+              <p class="timeline__org">Akshaya College of Engineering and Technology</p>
+              <p class="timeline__detail">CGPA <strong>7.14 / 10.00</strong></p>
+              <p class="timeline__detail">Coursework: machine learning, computer vision, NLP, data structures &amp; algorithms.</p>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="card timeline__card">
+              <span class="timeline__period">2025 — Present</span>
+              <h3>Bachelor of Science (Foundation)</h3>
+              <p class="timeline__sub">Data Science and Applications</p>
+              <p class="timeline__org">Indian Institute of Technology Madras</p>
+              <p class="timeline__detail">CGPA <strong>6.5 / 10.00</strong></p>
+              <p class="timeline__detail">Coursework: statistics, computational thinking, Python programming.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="section__eyebrow reveal">Skills</p>
+        <h2 class="section__title reveal">Tools I work with</h2>
+
+        <div class="skills__grid">
+          <div class="card skills__group reveal">
+            <h3>Programming Languages</h3>
+            <div class="skills__badges">
+              <span>Python</span><span>C</span><span>Java</span><span>SQL</span>
+            </div>
+          </div>
+
+          <div class="card skills__group reveal">
+            <h3>AI / Machine Learning</h3>
+            <div class="skills__badges">
+              <span>TensorFlow</span><span>PyTorch</span><span>Keras</span><span>Scikit-learn</span>
+              <span>OpenCV</span><span>NLTK</span><span>SpaCy</span>
+            </div>
+          </div>
+
+          <div class="card skills__group reveal">
+            <h3>LLM &amp; GenAI</h3>
+            <div class="skills__badges">
+              <span>LangChain</span><span>LlamaIndex</span><span>Hugging Face Transformers</span>
+            </div>
+          </div>
+
+          <div class="card skills__group reveal">
+            <h3>Data &amp; Backend</h3>
+            <div class="skills__badges">
+              <span>Pandas</span><span>NumPy</span><span>SciPy</span><span>Matplotlib</span>
+              <span>Seaborn</span><span>FastAPI</span>
+            </div>
+          </div>
+
+          <div class="card skills__group reveal">
+            <h3>Tools &amp; Platforms</h3>
+            <div class="skills__badges">
+              <span>Git</span><span>Docker</span><span>Linux</span><span>VS Code</span><span>Jupyter Notebook</span>
+            </div>
+          </div>
+
+          <div class="card skills__group reveal">
+            <h3>Soft Skills</h3>
+            <div class="skills__badges">
+              <span>Technical writing</span><span>End-to-end ownership</span><span>Stakeholder communication</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section section--dark" id="projects">
+      <div class="container">
+        <p class="section__eyebrow reveal">Projects</p>
+        <h2 class="section__title reveal">Selected work</h2>
+        <p class="section__lead reveal">End-to-end systems, not notebook experiments — each shipped with a working interface and documentation.</p>
+
+        <div class="projects__grid">
+          <article class="project reveal">
+            <span class="project__tag">Healthcare · Full-stack AI</span>
+            <h3>AI-Driven Clinical Decision Support System</h3>
+            <p>Full-stack healthcare decision support that predicts diseases from patient symptoms and produces clinical risk assessments.</p>
+            <ul class="project__features">
+              <li>NLP-based symptom extraction pipeline</li>
+              <li>Random Forest classifier for disease prediction</li>
+              <li>Integrated AI chatbot for medical queries &amp; follow-ups</li>
+              <li>FastAPI backend with React frontend and SQLite</li>
+            </ul>
+            <div class="project__stack">
+              <span>Python</span><span>NLP</span><span>FastAPI</span><span>React</span><span>SQLite</span>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/SiddharthGirish" target="_blank" rel="noopener" class="btn btn--small btn--outline-light">GitHub Repository</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <span class="project__tag">GenAI · RAG</span>
+            <h3>Contextual Search Engine</h3>
+            <p>Retrieval-augmented semantic search that grounds answers in source documents instead of relying on keyword matching.</p>
+            <ul class="project__features">
+              <li>NLP embeddings with similarity ranking</li>
+              <li>Context-aware retrieval beyond keywords</li>
+              <li>Reduced irrelevant results, improved answer grounding</li>
+            </ul>
+            <div class="project__stack">
+              <span>Python</span><span>RAG</span><span>Embeddings</span><span>LangChain</span>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/SiddharthGirish" target="_blank" rel="noopener" class="btn btn--small btn--outline-light">GitHub Repository</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <span class="project__tag">Computer Vision · Audio</span>
+            <h3>Multimodal Deepfake Detection</h3>
+            <p>Detects manipulated videos by combining visual and speech analysis — <strong>89% classification accuracy</strong>.</p>
+            <ul class="project__features">
+              <li>EfficientNet-B0 for frame-level visual analysis</li>
+              <li>Wav2Vec2 for speech signal processing</li>
+              <li>Streamlit web app with FFmpeg video pipeline</li>
+              <li>Modular, production-ready repository with docs</li>
+            </ul>
+            <div class="project__stack">
+              <span>PyTorch</span><span>EfficientNet</span><span>Wav2Vec2</span><span>Streamlit</span><span>FFmpeg</span>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/SiddharthGirish" target="_blank" rel="noopener" class="btn btn--small btn--outline-light">GitHub Repository</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <span class="project__tag">Data Analytics</span>
+            <h3>Health Monitoring Dashboard</h3>
+            <p>Dashboard that turns raw wearable data into clear, user-level health insights.</p>
+            <ul class="project__features">
+              <li>Analyzes heart rate, activity and step data</li>
+              <li>Trend visualization across time windows</li>
+              <li>Automated, human-readable health insights</li>
+            </ul>
+            <div class="project__stack">
+              <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/SiddharthGirish" target="_blank" rel="noopener" class="btn btn--small btn--outline-light">GitHub Repository</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section__eyebrow reveal">Experience</p>
+        <h2 class="section__title reveal">Where I've worked</h2>
+
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="card timeline__card">
+              <span class="timeline__period">Nov 2025 — Dec 2025 · Remote</span>
+              <h3>Machine Learning Intern</h3>
+              <p class="timeline__org">Mindenious EduTech</p>
+              <ul class="timeline__list">
+                <li>Developed and shipped supervised models with Scikit-learn reaching 95% accuracy, owning features end-to-end from scoping to evaluation.</li>
+                <li>Ran preprocessing and hyperparameter tuning, documenting results in clear technical notes for non-engineering stakeholders.</li>
+              </ul>
+              <div class="project__stack project__stack--light">
+                <span>Scikit-learn</span><span>Python</span><span>Model evaluation</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="card timeline__card">
+              <span class="timeline__period">Jul 2025 — Aug 2025 · Remote</span>
+              <h3>AI &amp; ML Intern</h3>
+              <p class="timeline__org">RV TechLearn</p>
+              <ul class="timeline__list">
+                <li>Built and monitored end-to-end ML pipelines (preprocessing → training → evaluation), applying MLOps practices for reproducible experiments.</li>
+                <li>Implemented a Vision Transformer (ViT) on the Cats vs Dogs dataset, reaching 95% validation accuracy with detailed error analysis.</li>
+              </ul>
+              <div class="project__stack project__stack--light">
+                <span>Vision Transformer</span><span>MLOps</span><span>Computer vision</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+    <section class="section section--tint" id="certifications">
+      <div class="container">
+        <p class="section__eyebrow reveal">Certifications</p>
+        <h2 class="section__title reveal">Licences &amp; certifications</h2>
+
+        <div class="certs__grid">
+          <div class="card cert reveal">
+            <div class="cert__icon" aria-hidden="true">✦</div>
+            <h3>Oracle Certified Foundations Associate</h3>
+            <p>Oracle · 2025</p>
+          </div>
+          <div class="card cert reveal">
+            <div class="cert__icon" aria-hidden="true">✦</div>
+            <h3>Data Science using Python</h3>
+            <p>Swayam · 2025</p>
+          </div>
+          <div class="card cert reveal">
+            <div class="cert__icon" aria-hidden="true">✦</div>
+            <h3>Machine Learning Training</h3>
+            <p>Mindenious · 2025</p>
+          </div>
+          <div class="card cert reveal">
+            <div class="cert__icon" aria-hidden="true">✦</div>
+            <h3>Java Training</h3>
+            <p>IIT Bombay · 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <p class="section__eyebrow reveal">Achievements</p>
+        <h2 class="section__title reveal">Highlights</h2>
+
+        <div class="certs__grid">
+          <div class="card achievement reveal">
+            <span class="achievement__metric">95%</span>
+            <p>Validation accuracy with a Vision Transformer on image classification, including full error analysis.</p>
+          </div>
+          <div class="card achievement reveal">
+            <span class="achievement__metric">89%</span>
+            <p>Classification accuracy on multimodal deepfake detection combining vision and speech models.</p>
+          </div>
+          <div class="card achievement reveal">
+            <span class="achievement__metric">2×</span>
+            <p>Degrees in progress simultaneously — B.Tech in AI &amp; DS plus the IIT Madras BS Foundation programme.</p>
+          </div>
+          <div class="card achievement reveal">
+            <span class="achievement__metric">4</span>
+            <p>Industry certifications earned in 2025, including Oracle Certified Foundations Associate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section section--dark" id="contact">
+      <div class="container">
+        <p class="section__eyebrow reveal">Contact</p>
+        <h2 class="section__title reveal">Let's build something</h2>
+        <p class="section__lead reveal">Open to AI/ML internships and collaborations — the fastest way to reach me is email.</p>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <ul class="contact__list">
+              <li>
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+                </span>
+                <div><strong>Name</strong><p>Siddharth Girish</p></div>
+              </li>
+              <li>
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                </span>
+                <div><strong>Email</strong><p><a href="mailto:siddharth.j.girish@gmail.com">siddharth.j.girish@gmail.com</a></p></div>
+              </li>
+              <li>
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
+                </span>
+                <div><strong>Phone</strong><p><a href="tel:+919342426548">+91 93424 26548</a></p></div>
+              </li>
+              <li>
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div><strong>Location</strong><p>Palakkad, Kerala, India</p></div>
+              </li>
+              <li>
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                </span>
+                <div><strong>LinkedIn</strong><p><a href="https://www.linkedin.com/in/siddharth-girish" target="_blank" rel="noopener">Siddharth Girish</a></p></div>
+              </li>
+              <li>
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12v3.15c0 .31.2.67.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+                </span>
+                <div><strong>GitHub</strong><p><a href="https://github.com/SiddharthGirish" target="_blank" rel="noopener">SiddharthGirish</a></p></div>
+              </li>
+            </ul>
+
+            <div class="contact__actions">
+              <a href="mailto:siddharth.j.girish@gmail.com" class="btn btn--primary">Email me</a>
+              <a href="https://www.linkedin.com/in/siddharth-girish" target="_blank" rel="noopener" class="btn btn--outline-light">LinkedIn</a>
+              <a href="https://github.com/SiddharthGirish" target="_blank" rel="noopener" class="btn btn--outline-light">GitHub</a>
+            </div>
+          </div>
+
+          <!-- Frontend-validated contact form (no backend required) -->
+          <div class="card contact__form-card reveal">
+            <div id="contactForm" role="form" aria-label="Contact form">
+              <div class="form__row">
+                <label for="fName">Name</label>
+                <input type="text" id="fName" name="name" placeholder="Your name" autocomplete="name" />
+                <span class="form__error" id="errName" role="alert"></span>
+              </div>
+              <div class="form__row">
+                <label for="fEmail">Email</label>
+                <input type="email" id="fEmail" name="email" placeholder="you@example.com" autocomplete="email" />
+                <span class="form__error" id="errEmail" role="alert"></span>
+              </div>
+              <div class="form__row">
+                <label for="fSubject">Subject</label>
+                <input type="text" id="fSubject" name="subject" placeholder="What's this about?" />
+                <span class="form__error" id="errSubject" role="alert"></span>
+              </div>
+              <div class="form__row">
+                <label for="fMessage">Message</label>
+                <textarea id="fMessage" name="message" rows="5" placeholder="Write your message…"></textarea>
+                <span class="form__error" id="errMessage" role="alert"></span>
+              </div>
+              <button type="button" class="btn btn--primary btn--full" id="sendBtn">Send message</button>
+              <p class="form__success" id="formSuccess" role="status"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="nav__logo">S<span>G</span>.</a>
+        <p>Designed &amp; Developed by Siddharth Girish</p>
+        <p class="footer__copy">© <span id="year"></span> Siddharth Girish. All rights reserved.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/siddharth-girish" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="https://github.com/SiddharthGirish" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.05 11.05 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.35.78 1.05.78 2.12v3.15c0 .31.2.67.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        </a>
+        <a href="mailto:siddharth.j.girish@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
