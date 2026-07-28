@@ -1,15 +1,13 @@
 /* ============================================================
    Siddharth Girish — Portfolio scripts
-   Vanilla JS only. Sections:
-   1. Profile image fallback
-   2. Mobile navigation
-   3. Sticky nav shadow + scroll progress + back-to-top
-   4. Active section highlighting
-   5. Typing animation (hero title)
-   6. Reveal-on-scroll
-   7. Animated counters
-   8. Contact form validation (frontend only)
-   9. Footer year
+   1. Mobile navigation
+   2. Sticky nav shadow + scroll progress + back-to-top
+   3. Active section highlighting
+   4. Typing animation (hero title)
+   5. Reveal-on-scroll
+   6. Animated counters
+   7. Contact form validation (frontend only)
+   8. Footer year
    ============================================================ */
 
 (function () {
@@ -17,19 +15,7 @@
 
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- 1. Profile image fallback ----------
-     If profile.jpg isn't present next to index.html,
-     show the "SG" monogram instead of a broken image. */
-  var profileImg = document.getElementById("profileImg");
-  var monogram = document.getElementById("monogram");
-  if (profileImg && monogram) {
-    profileImg.addEventListener("error", function () {
-      profileImg.style.display = "none";
-      monogram.style.display = "grid";
-    });
-  }
-
-  /* ---------- 2. Mobile navigation ---------- */
+  /* ---------- 1. Mobile navigation ---------- */
   var navToggle = document.getElementById("navToggle");
   var navLinks = document.getElementById("navLinks");
 
@@ -55,7 +41,7 @@
     if (e.key === "Escape") closeMenu();
   });
 
-  /* ---------- 3. Sticky nav shadow, scroll progress, back-to-top ---------- */
+  /* ---------- 2. Sticky nav shadow, scroll progress, back-to-top ---------- */
   var navbar = document.getElementById("navbar");
   var progressBar = document.getElementById("scrollProgress");
   var backToTop = document.getElementById("backToTop");
@@ -77,7 +63,7 @@
     window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
   });
 
-  /* ---------- 4. Active section highlighting ---------- */
+  /* ---------- 3. Active section highlighting ---------- */
   var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
   var linkMap = {};
   document.querySelectorAll(".nav__link").forEach(function (link) {
@@ -97,7 +83,7 @@
     });
   }
 
-  /* ---------- 5. Typing animation ---------- */
+  /* ---------- 4. Typing animation ---------- */
   var typedEl = document.getElementById("typedTitle");
   var titles = [
     "AI Engineer",
@@ -141,7 +127,7 @@
     typeLoop();
   }
 
-  /* ---------- 6. Reveal-on-scroll ---------- */
+  /* ---------- 5. Reveal-on-scroll ---------- */
   var revealEls = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window && !prefersReducedMotion) {
@@ -162,7 +148,7 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---------- 7. Animated counters ---------- */
+  /* ---------- 6. Animated counters ---------- */
   var counters = document.querySelectorAll(".stat__num");
   var counterDone = false;
 
@@ -207,7 +193,7 @@
     animateCounters();
   }
 
-  /* ---------- 8. Contact form validation ---------- */
+  /* ---------- 7. Contact form validation ---------- */
   var sendBtn = document.getElementById("sendBtn");
 
   var fields = {
@@ -266,7 +252,7 @@
     }
   });
 
-  /* ---------- 9. Footer year ---------- */
+  /* ---------- 8. Footer year ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 
   // Initialize state on load
